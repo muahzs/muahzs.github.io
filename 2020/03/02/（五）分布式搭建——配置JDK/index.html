@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="（四）分布式搭建——配置ssh免密, ZhangSong&#39;s Blog">
+    <meta name="keywords" content="（五）分布式搭建——配置JDK, ZhangSong&#39;s Blog">
     <meta name="description" content="专注于Blog,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>（四）分布式搭建——配置ssh免密 | ZhangSong&#39;s Blog</title>
+    <title>（五）分布式搭建——配置JDK | ZhangSong&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">（四）分布式搭建——配置ssh免密</h1>
+                    <h1 class="description center-align post-title">（五）分布式搭建——配置JDK</h1>
                 </div>
             </div>
         </div>
@@ -455,7 +455,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-28
+                    2020-03-02
                 </div>
                 
 
@@ -476,15 +476,26 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="（四）分布式搭建——配置ssh免密"><a href="#（四）分布式搭建——配置ssh免密" class="headerlink" title="（四）分布式搭建——配置ssh免密"></a>（四）分布式搭建——配置ssh免密</h1><p><img src="https://img-blog.csdnimg.cn/20210228183625386.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片1"></p>
-<p>在客户端主机中输入   ssh-keygen -t rsa<br>生成公/私钥对 然后回车   在进行三次回车</p>
-<p><img src="https://img-blog.csdnimg.cn/20210228183625428.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片2"></p>
-<p>将客户端主机中的公钥分发给其它主机</p>
-<p><img src="https://img-blog.csdnimg.cn/20210228183625465.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片3"></p>
-<p><img src="https://img-blog.csdnimg.cn/20210228183625493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片4"></p>
-<p>输入 yes  然后输入node1的密码 然后回车</p>
-<p><img src="https://img-blog.csdnimg.cn/20210228183625500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片5"><br>在master中操作 分别发给node1 node2和master<br>在node1中操作 分别发给node1 node2和master<br>在node2中操作 分别发给node1 node2和master</p>
-<p>命令分别为:<br>ssh-copy-id node1<br>ssh-copy-id node2<br>ssh-copy-id master</p>
+                <h1 id="（五）分布式搭建——配置JDK"><a href="#（五）分布式搭建——配置JDK" class="headerlink" title="（五）分布式搭建——配置JDK"></a>（五）分布式搭建——配置JDK</h1><p>上传到master节点<br>通过Xftp上传    jdk-8u211-linux-x64.tar.gz<br><img src="https://img-blog.csdnimg.cn/20210305232436750.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片1"><br><img src="https://img-blog.csdnimg.cn/20210305232447658.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片2"></p>
+<p>找到上传jdk的目录</p>
+<p><img src="https://img-blog.csdnimg.cn/20210305232503228.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片3"></p>
+<p>注意首先需要创建soft目录(在/use/local目录下 指向mkdir soft)<br>输入tar -zxvf jdk-8u211-linux-x64.tar.gz -C  /usr/local/soft/<br>然后回车 解压jdk</p>
+<p><img src="https://img-blog.csdnimg.cn/20210305232503230.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片4"></p>
+<p>等待执行  出现这个 执行结束</p>
+<p><img src="https://img-blog.csdnimg.cn/20210305232609942.png" alt="图片5"><br>进入jdk解压后的目录</p>
+<p><img src="https://img-blog.csdnimg.cn/20210305232609939.png" alt="图片6"></p>
+<p>执行mv jdk1.8.0_211 java 修改目录名称<br>下面开始配置javaJdk</p>
+<p><img src="https://img-blog.csdnimg.cn/2021030523265681.png" alt="图片7"><br><img src="https://img-blog.csdnimg.cn/2021030523265692.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片8"><br>进入文件 找到文件末尾位置</p>
+<p><img src="https://img-blog.csdnimg.cn/20210305232714224.png" alt="图片9"></p>
+<p>在末尾位置添加这样的内容 保存<br>JAVA_HOME对应的内容是jdk解压后的路径<br>PATH是固定格式</p>
+<p><img src="https://img-blog.csdnimg.cn/20210305232728282.png" alt="图片10"></p>
+<p>刷新环境变量</p>
+<p><img src="https://img-blog.csdnimg.cn/20210305232747209.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片11"><br>输入 java -version测试是否配置完成</p>
+<p>进行文件分发<br>1.把jdk解压后的目录分发到其他虚拟机</p>
+<p><img src="https://img-blog.csdnimg.cn/20210305232747218.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片12"><br>2.    把配置文件/etc/profile 分发到其他虚拟机</p>
+<p><img src="https://img-blog.csdnimg.cn/20210305232806914.png" alt="图片13"></p>
+<p>在其他虚拟机刷新环境变量 </p>
+<p>结束</p>
 
                 
             </div>
@@ -511,7 +522,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://muahzs.github.io/2020/02/28/%EF%BC%88%E5%9B%9B%EF%BC%89%E5%88%86%E5%B8%83%E5%BC%8F%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94%E9%85%8D%E7%BD%AEssh%E5%85%8D%E5%AF%86/">http://muahzs.github.io/2020/02/28/%EF%BC%88%E5%9B%9B%EF%BC%89%E5%88%86%E5%B8%83%E5%BC%8F%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94%E9%85%8D%E7%BD%AEssh%E5%85%8D%E5%AF%86/</a>
+                    <a href="http://muahzs.github.io/2020/03/02/%EF%BC%88%E4%BA%94%EF%BC%89%E5%88%86%E5%B8%83%E5%BC%8F%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94%E9%85%8D%E7%BD%AEJDK/">http://muahzs.github.io/2020/03/02/%EF%BC%88%E4%BA%94%EF%BC%89%E5%88%86%E5%B8%83%E5%BC%8F%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94%E9%85%8D%E7%BD%AEJDK/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -734,13 +745,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/02/%EF%BC%88%E4%BA%94%EF%BC%89%E5%88%86%E5%B8%83%E5%BC%8F%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94%E9%85%8D%E7%BD%AEJDK/">
+                <a href="/2020/03/05/%EF%BC%88%E5%85%AD%EF%BC%89%E5%88%86%E5%B8%83%E5%BC%8F%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85hadoop/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="（五）分布式搭建——配置JDK">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="（六）分布式搭建——安装hadoop">
                         
-                        <span class="card-title">（五）分布式搭建——配置JDK</span>
+                        <span class="card-title">（六）分布式搭建——安装hadoop</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -751,7 +762,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-02
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-05
                         </span>
                         <span class="publish-author">
                             
@@ -787,13 +798,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/27/%EF%BC%88%E4%B8%89%EF%BC%89%E5%88%86%E5%B8%83%E5%BC%8F%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94%E9%85%8D%E7%BD%AE%E6%98%A0%E5%B0%84/">
+                <a href="/2020/02/28/%EF%BC%88%E5%9B%9B%EF%BC%89%E5%88%86%E5%B8%83%E5%BC%8F%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94%E9%85%8D%E7%BD%AEssh%E5%85%8D%E5%AF%86/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="（三）分布式搭建——配置映射">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="（四）分布式搭建——配置ssh免密">
                         
-                        <span class="card-title">（三）分布式搭建——配置映射</span>
+                        <span class="card-title">（四）分布式搭建——配置ssh免密</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -804,7 +815,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-28
                             </span>
                         <span class="publish-author">
                             
