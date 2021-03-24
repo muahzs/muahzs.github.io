@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="（六）分布式搭建——安装hadoop, ZhangSong&#39;s Blog">
+    <meta name="keywords" content="数据挖掘-实验一, ZhangSong&#39;s Blog">
     <meta name="description" content="专注于Blog,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>（六）分布式搭建——安装hadoop | ZhangSong&#39;s Blog</title>
+    <title>数据挖掘-实验一 | ZhangSong&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">（六）分布式搭建——安装hadoop</h1>
+                    <h1 class="description center-align post-title">数据挖掘-实验一</h1>
                 </div>
             </div>
         </div>
@@ -435,12 +435,12 @@
                                 <span class="chip bg-color">blog</span>
                             </a>
                         
-                            <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%90%AD%E5%BB%BA/">
-                                <span class="chip bg-color">虚拟机搭建</span>
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">
+                                <span class="chip bg-color">数据挖掘</span>
                             </a>
                         
-                            <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">
-                                <span class="chip bg-color">大数据与人工智能</span>
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
                     </div>
@@ -455,7 +455,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-05
+                    2021-03-24
                 </div>
                 
 
@@ -476,45 +476,21 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="（六）分布式搭建——安装hadoop"><a href="#（六）分布式搭建——安装hadoop" class="headerlink" title="（六）分布式搭建——安装hadoop"></a>（六）分布式搭建——安装hadoop</h1><p>在master上操作<br><img src="https://img-blog.csdnimg.cn/2021030523352210.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片1"></p>
-<p>上传hadoop-2.6.0.tar.gz 到/usr/local/modules</p>
-<p><img src="https://img-blog.csdnimg.cn/20210305233521956.png" alt="图片2"></p>
-<p>进入/usr/local/modules 查看是否上传成功</p>
-<p><img src="https://img-blog.csdnimg.cn/20210305233521958.png" alt="图片3"></p>
-<p>执行 tar -zxvf hadoop-2.6.0.tar.gz -C /usr/local/soft/ 进行解压<br>解压到/usr/local/soft/目录下</p>
-<p><img src="https://img-blog.csdnimg.cn/20210305233521954.png" alt="图片4"></p>
-<p>查看是否解压成功</p>
-<p><img src="https://img-blog.csdnimg.cn/20210305233521972.png" alt="图片5"><br>执行cd /usr/local/soft/hadoop-2.6.0/etc/hadoop/  ll查看<br>需要修改slaves  hadoop-env.sh  core-site.xml   hdfs-site.xml    yarn-site.xml<br> mapred-site.xml（将mapred-site.xml.template 复制一份为 mapred-site.xml<br>命令：cp mapred-site.xml.template mapred-site.xml</p>
-<p><img src="https://img-blog.csdnimg.cn/20210305233521961.png" alt="图片6"></p>
-<p>删除原来的所有内容，添加其他虚拟机的名称</p>
-<p><img src="https://img-blog.csdnimg.cn/20210305233521963.png" alt="图片7"></p>
-<p><img src="https://img-blog.csdnimg.cn/20210305235341536.png" alt="图片8"></p>
-<p><img src="https://img-blog.csdnimg.cn/20210305233521971.png" alt="图片9"></p>
-<p>找到export JAVA_HOME 修改</p>
-<p><img src="https://img-blog.csdnimg.cn/20210305235537886.png" alt="图片10"><br>将下面的配置参数加入进去修改成对应自己的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;fs.defaultFS&lt;&#x2F;name&gt;</span><br><span class="line">                &lt;value&gt;hdfs:&#x2F;&#x2F;master:9000&lt;&#x2F;value&gt;</span><br><span class="line">        &lt;&#x2F;property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;hadoop.tmp.dir&lt;&#x2F;name&gt;</span><br><span class="line">                &lt;value&gt;&#x2F;usr&#x2F;local&#x2F;soft&#x2F;hadoop-2.6.0&#x2F;tmp&lt;&#x2F;value&gt;</span><br><span class="line">        &lt;&#x2F;property&gt;</span><br><span class="line">	    &lt;property&gt;</span><br><span class="line">                 &lt;name&gt;fs.trash.interval&lt;&#x2F;name&gt;</span><br><span class="line">                 &lt;value&gt;1440&lt;&#x2F;value&gt;</span><br><span class="line">        &lt;&#x2F;property&gt;</span><br><span class="line">&lt;&#x2F;configuration&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/20210305235558905.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片11"><br><img src="https://img-blog.csdnimg.cn/20210305235558898.png" alt="图片12"></p>
-<p>将下面的配置参数加入进去 dfs.replication设置为1</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.replication&lt;&#x2F;name&gt;</span><br><span class="line">        &lt;value&gt;1&lt;&#x2F;value&gt;</span><br><span class="line">    &lt;&#x2F;property&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.permissions&lt;&#x2F;name&gt;</span><br><span class="line">        &lt;value&gt;false&lt;&#x2F;value&gt;</span><br><span class="line">    &lt;&#x2F;property&gt;</span><br><span class="line">&lt;&#x2F;configuration&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20210307215401322.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片13"></p>
-<p><img src="https://img-blog.csdnimg.cn/2021030523561855.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片14"><br>将下面的配置参数加入进去不用修改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;yarn.resourcemanager.hostname&lt;&#x2F;name&gt;</span><br><span class="line">&lt;value&gt;master&lt;&#x2F;value&gt;</span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;yarn.nodemanager.aux-services&lt;&#x2F;name&gt;</span><br><span class="line">&lt;value&gt;mapreduce_shuffle&lt;&#x2F;value&gt;</span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;yarn.log-aggregation-enable&lt;&#x2F;name&gt;</span><br><span class="line">&lt;value&gt;true&lt;&#x2F;value&gt;</span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;yarn.log-aggregation.retain-seconds&lt;&#x2F;name&gt;</span><br><span class="line">&lt;value&gt;604800&lt;&#x2F;value&gt;</span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;&#x2F;configuration&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20210307215501957.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片15"></p>
-<p><img src="https://img-blog.csdnimg.cn/20210305235644719.png" alt="图片16"><br>将mapred-site.xml.template 复制一份为 mapred-site.xml<br>命令：cp mapred-site.xml.template mapred-site.xml<br>然后在修改<br>将下面的配置参数加入进去不用修改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">   &lt;property&gt;</span><br><span class="line">		&lt;name&gt;mapreduce.framework.name&lt;&#x2F;name&gt;</span><br><span class="line">		&lt;value&gt;yarn&lt;&#x2F;value&gt;</span><br><span class="line">	&lt;&#x2F;property&gt;</span><br><span class="line">	&lt;property&gt;  </span><br><span class="line">		&lt;name&gt;mapreduce.jobhistory.address&lt;&#x2F;name&gt;  </span><br><span class="line">		&lt;value&gt;master:10020&lt;&#x2F;value&gt;  </span><br><span class="line">	&lt;&#x2F;property&gt;  </span><br><span class="line">	&lt;property&gt;  </span><br><span class="line">		&lt;name&gt;mapreduce.jobhistory.webapp.address&lt;&#x2F;name&gt;  </span><br><span class="line">		&lt;value&gt;master:19888&lt;&#x2F;value&gt;  </span><br><span class="line">	&lt;&#x2F;property&gt; </span><br><span class="line">&lt;&#x2F;configuration&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20210305235726663.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片17"></p>
-<p>将hadoop的安装目录分别拷贝到其他子节点<br> scp -r /usr/local/soft/hadoop-2.6.0  node1:/usr/local/soft/<br> scp -r /usr/local/soft/hadoop-2.6.0  node2:/usr/local/soft/</p>
-<p><img src="https://img-blog.csdnimg.cn/20210305235726658.png" alt="图片18"></p>
-<p>配置Hadoop环境变量<br>vim /etc/profile<br>进行如下修改</p>
-<p><img src="https://img-blog.csdnimg.cn/20210305233521994.png" alt="图片19"><br><img src="https://img-blog.csdnimg.cn/20210307215947391.png" alt="图片20"></p>
-<p>将环境变量文件拷贝到其他子节点<br> scp -r /etc/profile  node1:/etc/profile<br> scp -r /etc/profile  node2:/etc/profile</p>
-<p>刷新环境变量<br>启动hadoop</p>
-<p><img src="https://img-blog.csdnimg.cn/202103052335221.png" alt="图片21"></p>
-<p><img src="https://img-blog.csdnimg.cn/20210307220028396.png" alt="图片22"><br><img src="https://img-blog.csdnimg.cn/20210307220048972.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片23"><br>第一次启动会出现提示 输入yes然后回车<br>查看主节点master进程 通过jps命令查看</p>
-<p><img src="https://img-blog.csdnimg.cn/20210307220107778.png" alt="图片24"><br>3查看子节点node1 node2进程 通过jps命令查看 </p>
-<p><img src="https://img-blog.csdnimg.cn/202103052335222.png" alt="图片25"><br><img src="https://img-blog.csdnimg.cn/202103052335225.png" alt="图片26"><br>主节点进程：namenode/ secondarnamenode/resourcemanager<br>子节点进程 datanode /nodemanager<br>然后验证hdfs<br>可以登录浏览器地址：192.168.149.110:50070 （ip地址是master的地址）<br>看到下面页面证明 hdfs装好了</p>
-<p><img src="https://img-blog.csdnimg.cn/2021030523352254.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片27"></p>
+                <p>1.1.编辑器打开后，创建新的python文件，并更改该文件名称。记录：创建以“helloworld+自己学号后两位”命名的python文件，并截屏。<img src="https://img-blog.csdnimg.cn/20210324210515121.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片1"></p>
+<p>2.仿照下面示例代码输入，此时的体重更改为学号的后两位，并使用语句对小狗的体重进行查询。记录：对小狗个维度定义的代码和查询结果进行截屏。<br><img src="https://img-blog.csdnimg.cn/20210324210515132.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片2"></p>
+<p>3.仿照下列示例代码输入，将类型的名称充当类型之间的转换操作符，输入与示例不同的例子感受操作原理。记录：请给出代码内容、输入和输出截屏。<br><img src="https://img-blog.csdnimg.cn/20210324210515154.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片3"></p>
+<p>4.仿照下面示例代码输入，将a、b列表中的4个数字换成9位学号，进行排序。记录：请给出代码内容、输入和输出截屏。<br><img src="https://img-blog.csdnimg.cn/20210324210515253.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片4"></p>
+<p>5.仿照下面示例代码输入,将3替换成学号最后一位，完成输出。记录：请给出代码内容、输入和输出截屏。<br><img src="https://img-blog.csdnimg.cn/20210324210515160.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片5"></p>
+<p>6.在上面‘2’操作完成后，输入t[1]=2，对元组进行修改，查看输出修改结果。记录：请给出代码内容、输入和输出截屏。<br><img src="https://img-blog.csdnimg.cn/20210324210515255.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片6"></p>
+<p>7.仿照下面示例代码输入，将100改成任意三位数n，分别通过While循环和For循环，求出n以内的所有平方和。记录：请给出代码内容、输入和输出截屏。<br><img src="https://img-blog.csdnimg.cn/20210324210515259.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片7-1"><br><img src="https://img-blog.csdnimg.cn/20210324211426108.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片7-2"></p>
+<p>8.仿照下面示例代码输入，找出2,3,23,77，-7，97，-22，99，54,102中第一个大于98的数。记录：请给出代码内容、输入和输出截屏。<br><img src="https://img-blog.csdnimg.cn/20210324210515193.jpg" alt="图片8"></p>
+<p>9.仿照下面示例代码输入，找出2,3,23,77，-7，97，-22，99，54,102中大于0的数的平方根。记录：请给出代码内容、输入和输出截屏。<br><img src="https://img-blog.csdnimg.cn/20210324210515292.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片9"></p>
+<p>10.仿照下面示例代码输入，导入numpy，创建任意一维、二维和三位数组。记录：请给出代码内容、输入和输出截屏。<br><img src="https://img-blog.csdnimg.cn/20210324210515276.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片10"></p>
+<p>11.仿照下面示例代码输入，使用random（）创建随机的3*4数组。记录：请给出代码内容、输入和输出截屏。<br><img src="https://img-blog.csdnimg.cn/20210324210515284.jpg" alt="图片11"></p>
+<p>12.仿照下面示例代码输入，对数组进行切片操作，要求依次输出2*3的数组[[1,5,9],[2,4,6]]的第3列、第2行和前2列。记录：请给出代码内容、输入和输出截屏。<br>1    5    9<br>2    4    6</p>
+<p><img src="https://img-blog.csdnimg.cn/20210324210515216.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片12"></p>
+<p>13.仿照下面示例代码输入，一维数组[1,2,3]变成2*3的数组[[1,2,3],[1,2,3]]。记录：请给出代码内容、输入和输出截屏。<br><img src="https://img-blog.csdnimg.cn/20210324210515242.jpg" alt="图片13"></p>
+<p>14.要求编写程序，并提供给用户给定最小值和最大值的范围的权利，求输出此范围区间内的所有素数。例如输入：最小值1，最大值10，输出为2,3,5,7。记录：请给出代码内容、输入和输出截屏。<br><img src="https://img-blog.csdnimg.cn/20210324210515125.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2MTc0NDEy,size_16,color_FFFFFF,t_70" alt="图片14"></p>
 
                 
             </div>
@@ -541,7 +517,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://muahzs.github.io/2021/03/05/%EF%BC%88%E5%85%AD%EF%BC%89%E5%88%86%E5%B8%83%E5%BC%8F%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85hadoop/">http://muahzs.github.io/2021/03/05/%EF%BC%88%E5%85%AD%EF%BC%89%E5%88%86%E5%B8%83%E5%BC%8F%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85hadoop/</a>
+                    <a href="http://muahzs.github.io/2021/03/24/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E5%AE%9E%E9%AA%8C%E4%B8%80/">http://muahzs.github.io/2021/03/24/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E5%AE%9E%E9%AA%8C%E4%B8%80/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -583,12 +559,12 @@
                                     <span class="chip bg-color">blog</span>
                                 </a>
                             
-                                <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%90%AD%E5%BB%BA/">
-                                    <span class="chip bg-color">虚拟机搭建</span>
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">
+                                    <span class="chip bg-color">数据挖掘</span>
                                 </a>
                             
-                                <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">
-                                    <span class="chip bg-color">大数据与人工智能</span>
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
                         </div>
@@ -760,9 +736,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/03/24/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E5%AE%9E%E9%AA%8C%E4%B8%80/">
                     <div class="card-image">
@@ -780,9 +757,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -791,6 +768,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -817,13 +795,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/02/%EF%BC%88%E4%BA%94%EF%BC%89%E5%88%86%E5%B8%83%E5%BC%8F%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94%E9%85%8D%E7%BD%AEJDK/">
+                <a href="/2021/03/05/%EF%BC%88%E5%85%AD%EF%BC%89%E5%88%86%E5%B8%83%E5%BC%8F%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85hadoop/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="（五）分布式搭建——配置JDK">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="（六）分布式搭建——安装hadoop">
                         
-                        <span class="card-title">（五）分布式搭建——配置JDK</span>
+                        <span class="card-title">（六）分布式搭建——安装hadoop</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -834,7 +812,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-05
                             </span>
                         <span class="publish-author">
                             
