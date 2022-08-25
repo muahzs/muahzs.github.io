@@ -3,11 +3,11 @@
   <title>Zhangs`blog</title>
   <icon>https://www.gravatar.com/avatar/7535473a37b5c038cbd8221d48eb3430</icon>
   <subtitle>不忘初心，砥砺前行</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://muahzs.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://muahzs.github.io/"/>
   <updated>2022-08-24T15:43:32.462Z</updated>
-  <id>http://example.com/</id>
+  <id>https://muahzs.github.io/</id>
   
   <author>
     <name>zhangs</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/posts/4a17b156.html"/>
-    <id>http://example.com/posts/4a17b156.html</id>
+    <link href="https://muahzs.github.io/posts/4a17b156.html"/>
+    <id>https://muahzs.github.io/posts/4a17b156.html</id>
     <published>2022-08-17T02:24:47.688Z</published>
     <updated>2022-08-24T15:43:32.462Z</updated>
     
